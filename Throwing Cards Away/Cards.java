@@ -6,23 +6,25 @@ public class Cards
      public static void main(String[] args) 
     {
         Queue cola = new Queue();
+        Queue cola1 = new Queue();
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
         
-        cola.Enqueue(new nodo(1));
-        cola.Enqueue(new nodo(2));
-        cola.Enqueue(new nodo(3));
-        cola.Enqueue(new nodo(4));
-        cola.Enqueue(new nodo(5));
-        cola.Enqueue(new nodo(6));
-        cola.Enqueue(new nodo(7));
+        for (int i = 1; i <= size; i++)
+        {
+            cola.Enqueue(new nodo(i));
+        }
         
         while(cola.length() > 1)
         {
-            cola.Dequeue();
+            
+            int s = Integer.parseInt(cola.Dequeue());
+            cola1.Enqueue(new nodo(s));
             String x = cola.Dequeue();
             int y = Integer.parseInt(x);
             cola.Enqueue(new nodo(y));
         }
-        
+        cola1.printQueue();
         cola.printQueue();
     }
 }
