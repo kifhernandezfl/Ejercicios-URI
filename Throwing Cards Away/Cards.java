@@ -14,42 +14,15 @@ public class Cards
         cola.Enqueue(new nodo(5));
         cola.Enqueue(new nodo(6));
         cola.Enqueue(new nodo(7));
-        cola.Dequeue();
-        String x = cola.Dequeue();
-        int y = Integer.parseInt(x);
-        cola.Enqueue(new nodo(y));
-        //cola.printQueue();
-        cola.Dequeue();
-        x = cola.Dequeue();
-        y = Integer.parseInt(x);
-        cola.Enqueue(new nodo(y));
-        //cola.printQueue();
-        cola.Dequeue();
-        x = cola.Dequeue();
-        y = Integer.parseInt(x);
-        cola.Enqueue(new nodo(y));
-        //cola.printQueue();
-        cola.Dequeue();
-        x = cola.Dequeue();
-        y = Integer.parseInt(x);
-        cola.Enqueue(new nodo(y));
-        //cola.printQueue();
-        cola.Dequeue();
-        x = cola.Dequeue();
-        y = Integer.parseInt(x);
-        cola.Enqueue(new nodo(y));
-        //cola.printQueue();
-        cola.Dequeue();
-        x = cola.Dequeue();
-        y = Integer.parseInt(x);
-        cola.Enqueue(new nodo(y));
-        cola.printQueue();
         
-/*        System.out.println(cola.Dequeue());
-        System.out.println(cola.Dequeue());
-        cola.printQueue();*/
+        while(cola.length() > 1)
+        {
+            cola.Dequeue();
+            String x = cola.Dequeue();
+            int y = Integer.parseInt(x);
+            cola.Enqueue(new nodo(y));
+        }
+        
+        cola.printQueue();
     }
 }
-
-    
-
